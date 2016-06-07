@@ -11,6 +11,16 @@
 body {
   font-family: 'moonlight', sans-serif;
   background: repeating-linear-gradient(to right, #a6c2e1, #a6c2e1 10px, #96b3dc 10px, #96b3dc 20px); }
+  body .half {
+    width: 100%; }
+    @media (min-width: 769px) {
+      body .half {
+        width: 50%;
+        float: left; } }
+    @media (min-width: 1301px) {
+      body .half {
+        width: 50%;
+        float: left; } }
   body h1 {
     display: block;
     text-align: center; }

@@ -1,4 +1,6 @@
 //vars 
+$tablet-down: 768px;
+$monitor-up: 1300px;
 
 //mixins 
 
@@ -27,14 +29,26 @@
 
 //styles 
 body {
-	font-family: 'moonlight', sans-serif;
+	font-family: 'moonlight', sans-serif; 
 	background: repeating-linear-gradient(
-	  to right,
-	  #a6c2e1,
-	  #a6c2e1 10px,
-	  #96b3dc 10px,
-	  #96b3dc 20px
-	);
+		  to right,
+		  #a6c2e1,
+		  #a6c2e1 10px,
+		  #96b3dc 10px,
+		  #96b3dc 20px
+		);
+	.half {
+		width: 100%; 
+		@media (min-width: $tablet-down+1) {
+			width: 50%; 
+			float: left; 
+		}
+		@media (min-width: $monitor-up+1) {
+			width: 50%; 
+			float: left; 
+		}
+	}
+
 	h1 {
 		display: block; 
 		text-align: center; 
