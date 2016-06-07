@@ -1,15 +1,22 @@
 @font-face {
   font-family: 'moonlight';
-  src: url("moon_light-webfont.woff2") format("woff2"), url("moon_light-webfont.woff") format("woff");
+  src: url("fonts/moon_light-webfont.woff2") format("woff2"), url("fonts/moon_light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'moonbold';
-  src: url("moon_bold-webfont.woff2") format("woff2"), url("moon_bold-webfont.woff") format("woff");
+  src: url("fonts/moon_bold-webfont.woff2") format("woff2"), url("fonts/moon_bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 body {
   font-family: 'moonlight', sans-serif;
-  background: repeating-linear-gradient(34deg, #a6c2e1, #a6c2e1 10px, #96b3dc 10px, #96b3dc 19px); }
+  background: repeating-linear-gradient(to right, #a6c2e1, #a6c2e1 10px, #96b3dc 10px, #96b3dc 20px); }
+  body h1 {
+    display: block;
+    text-align: center; }
+  body .tooth {
+    width: 80%;
+    display: block;
+    margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
