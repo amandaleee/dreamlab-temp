@@ -1,7 +1,14 @@
 //vars 
+$light: #fff;
+$dark: #231f20;
+
 $dark-blue: #a6c2e1;
+$dark-green: #c5dc7a;
+
 $light-blue: #96b3dc;
+$light-green: #e2eba6;
 $light-teal: #c3e5de;
+
 //mixins 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -10,11 +17,16 @@ $light-teal: #c3e5de;
           border-radius: $radius;
 }
 @mixin box-sizing() {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-
+@mixin centerMe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 
 //fonts
 
@@ -37,52 +49,110 @@ $light-teal: #c3e5de;
 }
 
 //styles 
-body {
-	font-family: 'moonlight', sans-serif; 
-	background: repeating-linear-gradient(
-		  to right,
-		  $dark-blue, 
-		  $dark-blue 10px,
-		  $light-blue 10px,
-		  $light-blue 20px
-	);
-	position: relative;
-	.container {
-		margin-top: 15%; 
-		h1, p, form {
-			margin: auto;
-			display: block; 
-			text-align: center; 
-			max-width: 500px; 
-		}
-		h1 {
-			font-size: 56px; 
-			margin-bottom: 30px;
-		}
-		p {
-			font-size: 22px;
-			margin-bottom: 18px;
-		}
-	//mailchimp overrides go here
-	 #mc_embed_signup{
-	 	input {
-	 		width: 300px; 
-	 		display: block; 
-	 		margin:10px auto; 
-	 		font: {
-	 			family: 'moonlight', sans-serif;
-	 			size: 18px;
-	 		} 
-	 		padding: 5px;
-	 		@include border-radius(3px); 
-	 		@include box-sizing();
-	 		-webkit-appearance: none;
-	 		border: none;
-	 	}
-	 	input[type=submit] {
-	 		background-color: $light-teal;
-	 	}
-	}
-	}
-	
+
+//elements
+body { 
+    font-family: 'moonlight', sans-serif; 
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+p { 
+    font-size: 22px; 
+    text-align: center;
+}
+
+p + p { margin-top: 18px; }
+
+//landscape
+.landscape {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sky {
+    width: 200vw;
+    height: 200vw;
+    background: repeating-linear-gradient(
+      to right,
+      #a6c2e1,
+      #a6c2e1 10px,
+      #96b3dc 10px,
+      #96b3dc 20px
+    );
+
+    @include centerMe;
+
+    transform: translate(-50%, -50%) rotate(47deg);
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    border-top: 10px solid $dark-green;
+    width: 100%;
+    height: 10vh;
+    background: $light-green;
+}
+
+//container
+.container {
+    z-index: 200;
+    width: 80%;
+    max-width: 500px;
+
+    @include centerMe;
+}
+
+//fonts 
+.hdg{}
+
+.hdg_1 {
+    margin-bottom: 30px;
+    font-size: 56px; 
+    text-align: center;
+}
+
+//logo
+.logoContainer {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 38%;
+    margin: auto;
+    background: url('img/logo.svg') no-repeat 50% 50%;
+}
+
+
+//mailchimp overrides go here
+#mc_embed_signup{
+    input {
+        width: 300px; 
+        display: block; 
+        margin:10px auto; 
+        font: {
+            family: 'moonlight', sans-serif;
+            size: 18px;
+        } 
+        padding: 5px;
+        @include border-radius(3px); 
+        @include box-sizing();
+        -webkit-appearance: none;
+        border: none;
+    }
+    input[type=submit] {
+        background-color: $light-teal;
+    }
 }
