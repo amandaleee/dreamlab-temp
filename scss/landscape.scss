@@ -26,6 +26,50 @@
     height: 10vh;
     background: $light-green;
   }
+  .anvil {
+    width: 100px; 
+    height: 100px; 
+    @include border-radius(50px); 
+    
+    position: absolute; 
+    top: 0;
+    left: 0;
+    &.animate {
+      animation-name: cloud;
+      animation-duration: 4s;
+      // animation-timing-function: ease;
+      animation-timing-function: linear;
+      animation-iteration-count: 56; 
+      animation-direction: normal;
+      animation-delay: 0;
+      animation-play-state: running;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes cloud {
+    0% {
+      left: -100px;
+      background-color: blue; 
+    }
+    25% {
+      left: 25vw;
+      background-color: purple;
+    }
+    50% {    
+      left: 50vw;
+      background-color: pink;
+    }
+    75% {
+      left: 75vw;
+      background-color: red;
+    }
+    100% {
+      left: 100vw;
+      background-color: orange;
+    }
+
+  }
 }
 
 
