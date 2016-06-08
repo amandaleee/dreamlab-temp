@@ -1,0 +1,21 @@
+#mc_embed_signup{
+  input {
+    width: 300px; 
+    display: block; 
+    margin:10px auto; 
+    font: {
+      family: 'moonlight', sans-serif;
+      size: 18px;
+    } 
+    text-align: center;
+    padding: 5px;
+    @include border-radius(3px); 
+    @include box-sizing();
+    -webkit-appearance: none;
+    border: none;
+
+  }
+  input[type=submit] {
+      background-color: $light-teal;
+  }
+}
