@@ -69,60 +69,63 @@ body {
     -ms-border-radius: 50px;
     border-radius: 50px;
     position: absolute;
-    left: 0; }
+    border: 1px solid blue; }
     .landscape .anvil.anvil1 {
-      top: 30vh; }
-      .landscape .anvil.anvil1.animate {
-        animation-duration: 12s; }
+      top: 30vh;
+      animation-duration: 12s; }
     .landscape .anvil.anvil2 {
-      top: 0; }
-      .landscape .anvil.anvil2.animate {
-        animation-duration: 8s; }
+      top: 0;
+      animation-duration: 8s; }
     .landscape .anvil.anvil3 {
-      top: 50vh; }
-      .landscape .anvil.anvil3.animate {
-        animation-duration: 7s; }
+      top: 50vh;
+      animation-duration: 7s; }
+    .landscape .anvil.anvil4 {
+      top: 33vh;
+      animation-duration: 13s; }
+    .landscape .anvil.anvil5 {
+      top: 24vh;
+      animation-duration: 4s; }
     .landscape .anvil.animate-left {
+      left: 0;
       animation-name: anvil-left;
-      animation-duration: 4s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-direction: normal;
       animation-delay: 0;
       animation-play-state: running;
       animation-fill-mode: forwards; }
+    .landscape .anvil.animate-right {
+      right: 0;
+      animation-name: anvil-right;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-delay: 0;
+      animation-play-state: running;
+      animation-fill-mode: forwards; }
+
 @keyframes anvil-left {
   0% {
-    left: -100px;
-    background-color: blue; }
+    left: -100px; }
   25% {
-    left: 25vw;
-    background-color: purple; }
+    left: 25vw; }
   50% {
-    left: 50vw;
-    background-color: pink; }
+    left: 50vw; }
   75% {
-    left: 75vw;
-    background-color: red; }
+    left: 75vw; }
   100% {
-    left: 100vw;
-    background-color: orange; } }
-@keyframes anvil-reverse {
+    left: 100vw; } }
+@keyframes anvil-right {
   0% {
-    right: -100px;
-    background-color: blue; }
+    right: -100px; }
   25% {
-    right: 25vw;
-    background-color: purple; }
+    right: 25vw; }
   50% {
-    right: 50vw;
-    background-color: pink; }
+    right: 50vw; }
   75% {
-    right: 75vw;
-    background-color: red; }
+    right: 75vw; }
   100% {
-    right: 100vw;
-    background-color: orange; } }
+    right: 100vw; } }
 #mc_embed_signup input {
   width: 300px;
   display: block;

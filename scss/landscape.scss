@@ -31,28 +31,40 @@
     height: 100px; 
     @include border-radius(50px); 
     position: absolute; 
-    left: 0;
+    border: 1px solid blue;
     &.anvil1 {
       top: 30vh;
-      &.animate {
-        animation-duration: 12s;
-      }
+       animation-duration: 12s;
     }
     &.anvil2 {
       top: 0;
-      &.animate {
-        animation-duration: 8s;
-      }
+      animation-duration: 8s;
     }
     &.anvil3 {
       top: 50vh;
-      &.animate {
-        animation-duration: 7s;
-      }
+      animation-duration: 7s;
+    }
+    &.anvil4 {
+      top: 33vh;
+      animation-duration:13s;
+    }
+    &.anvil5 {
+      top: 24vh;
+      animation-duration:4s;
     }
     &.animate-left {
+      left: 0;
       animation-name: anvil-left;
-      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; 
+      animation-direction: normal;
+      animation-delay: 0;
+      animation-play-state: running;
+      animation-fill-mode: forwards;
+    }
+    &.animate-right {
+      right: 0;
+      animation-name: anvil-right;
       animation-timing-function: linear;
       animation-iteration-count: infinite; 
       animation-direction: normal;
@@ -62,51 +74,42 @@
     }
   }
 
-  @keyframes anvil-left {
+  
+}
+
+@keyframes anvil-left {
     0% {
       left: -100px;
-      background-color: blue; 
     }
     25% {
-      left: 25vw;
-      background-color: purple;
-    }
+      left: 25vw;    }
     50% {    
       left: 50vw;
-      background-color: pink;
     }
     75% {
       left: 75vw;
-      background-color: red;
     }
     100% {
       left: 100vw;
-      background-color: orange;
     }
   }
-  @keyframes anvil-reverse {
+  @keyframes anvil-right {
     0% {
-      right: -100px;
-      background-color: blue; 
+     right: -100px;
     }
     25% {
       right: 25vw;
-      background-color: purple;
     }
     50% {    
       right: 50vw;
-      background-color: pink;
     }
     75% {
       right: 75vw;
-      background-color: red;
     }
     100% {
       right: 100vw;
-      background-color: orange;
     }
   }
-}
 
 
 
