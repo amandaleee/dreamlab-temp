@@ -69,18 +69,29 @@ body {
     -ms-border-radius: 50px;
     border-radius: 50px;
     position: absolute;
-    top: 0;
     left: 0; }
-    .landscape .anvil.animate {
-      animation-name: cloud;
+    .landscape .anvil.anvil1 {
+      top: 30vh; }
+      .landscape .anvil.anvil1.animate {
+        animation-duration: 12s; }
+    .landscape .anvil.anvil2 {
+      top: 0; }
+      .landscape .anvil.anvil2.animate {
+        animation-duration: 8s; }
+    .landscape .anvil.anvil3 {
+      top: 50vh; }
+      .landscape .anvil.anvil3.animate {
+        animation-duration: 7s; }
+    .landscape .anvil.animate-left {
+      animation-name: anvil-left;
       animation-duration: 4s;
       animation-timing-function: linear;
-      animation-iteration-count: 56;
+      animation-iteration-count: infinite;
       animation-direction: normal;
       animation-delay: 0;
       animation-play-state: running;
       animation-fill-mode: forwards; }
-@keyframes cloud {
+@keyframes anvil-left {
   0% {
     left: -100px;
     background-color: blue; }
@@ -95,6 +106,22 @@ body {
     background-color: red; }
   100% {
     left: 100vw;
+    background-color: orange; } }
+@keyframes anvil-reverse {
+  0% {
+    right: -100px;
+    background-color: blue; }
+  25% {
+    right: 25vw;
+    background-color: purple; }
+  50% {
+    right: 50vw;
+    background-color: pink; }
+  75% {
+    right: 75vw;
+    background-color: red; }
+  100% {
+    right: 100vw;
     background-color: orange; } }
 #mc_embed_signup input {
   width: 300px;
