@@ -283,7 +283,7 @@ body {
     top: 100vh; } }
 .bunny {
   position: absolute;
-  background-image: url(img/bunny.gif);
+  background-image: url(img/bun-bun.gif);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
