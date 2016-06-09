@@ -44,8 +44,6 @@
 }
 // anvils
 .anvils {
-  @extend .animations;
-  display: none;
   .anvil {    
     position: absolute; 
     animation-timing-function: linear;
@@ -126,7 +124,8 @@
     left: -100px;
   }
   25% {
-    left: 25vw;    }
+    left: 25vw;    
+  }
   50% {    
     left: 50vw;
   }
@@ -157,7 +156,6 @@
 
 .teeth {
   @extend .animations;
-  display: none;
   .tooth {
     position: absolute; 
     background: {
@@ -173,8 +171,6 @@
     animation-play-state: running;
     animation-fill-mode: forwards;
     animation-name: tooth;
-    width: 50px; 
-    height: 100px; 
     &.tooth1 {
       left: 0;
       animation-duration: 4s;
@@ -292,14 +288,12 @@
       @extend .mobile-hide; 
       width: 2.8vw; 
       height: 5.6vw;
-
     }
     &.tooth19 {
       left: 96vw;
       animation-duration: 5.6s;
       width: 8.5vw; 
-      height: 17vw;
-      
+      height: 17vw; 
     }
 
   }
@@ -323,9 +317,9 @@
     top: 100vh;
   }
 }
+
 .bunny {
-  @extend .animations; 
-  // display: none;
+  @extend .animations;
   position: absolute; 
   background: {
     image: url(img/bunny.gif);
@@ -341,10 +335,9 @@
   animation-fill-mode: forwards;
   animation-name: bunny;
   left: 0;
-  top: 80vh;
-  animation-duration: 18s;
-  width: 10vh;
-  height: 10vh; 
+  top: 70vh;
+  animation-duration: 8s;
+  width: 80px;
 }
 
 @keyframes bunny {
@@ -352,20 +345,15 @@
    left: -100px;
   }
   25% {
-    left: 25vh;
+    left: 25vw;
   }
   50% {    
-    left: 50vh;
+    left: 50vw;
   }
   75% {
-    left: 75vh;
+    left: 75vw;
   }
   100% {
-    left: 100vh;
-  }
-  
+    left: 100vw;
+  } 
 }
-
-
-
-
