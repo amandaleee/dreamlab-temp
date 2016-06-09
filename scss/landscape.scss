@@ -328,12 +328,12 @@
   // display: none;
   position: absolute; 
   background: {
-    // image: url(img/tooth-trailing.svg);
+    image: url(img/bunny.gif);
     size: contain;
     repeat: no-repeat;
     position: center center;
   }
-  animation-timing-function: ease-in ease-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite; 
   animation-direction: normal;
   animation-delay: 0;
@@ -349,70 +349,21 @@
 
 @keyframes bunny {
   0% {
-    background-color: blue;
-    left: -100px;
-  }
-  5% {
-    left: 10vw;
-    top: 70vh;
-  }
-  7% {
-    left: 20vw;
-    top: 80vh;
-  }
-  20% {
-    background-color: purple;
-    left: 20vw;
-    top: 80vh;
+   left: -100px;
   }
   25% {
-    left: 30vw; 
-    top: 70vh;
-  } 
-  27% {
-    left: 40vw;
-    top: 80vh
+    left: 25vh;
   }
-  40% {
-    background-color: indigo;
-    left: 40vw;
-    top: 80vh;
+  50% {    
+    left: 50vh;
   }
-  45% {
-    left: 50vw;
-    top: 70vh;
+  75% {
+    left: 75vh;
   }
-  47% {
-    left: 60%; 
-    top: 80vh; 
-  }
-  60% {    
-    background-color:  darkmagenta;  
-    left: 50vw;
-    top: 70vh;
-  }
-  65% {
-    left: 60vw;
-    top: 80vh;
-  }
-  67% {
-
-  }
-  80% {
-    background-color:  mediumvioletred;
-  }
-  85% {
-
-  }
-  87% {
-
-  }
-
   100% {
-    background-color: silver;
-    left: 110vw;
-    top: 80vh;
+    left: 100vh;
   }
+  
 }
 
 
