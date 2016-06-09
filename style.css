@@ -68,7 +68,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999; }
+  z-index: 9999;
+  overflow: hidden; }
+
+@media (max-width: 768px) {
+  .mobile-hide, .teeth .tooth.tooth2, .teeth .tooth.tooth5, .teeth .tooth.tooth7, .teeth .tooth.tooth9, .teeth .tooth.tooth10, .teeth .tooth.tooth13, .teeth .tooth.tooth14, .teeth .tooth.tooth15, .teeth .tooth.tooth16, .teeth .tooth.tooth18 {
+    display: none; } }
 
 .anvils {
   display: none; }
@@ -163,6 +168,7 @@ body {
   background-image: url(img/tooth-trailing.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -170,82 +176,115 @@ body {
   animation-play-state: running;
   animation-fill-mode: forwards;
   animation-name: tooth;
-  width: 100px;
+  width: 50px;
   height: 100px; }
   .teeth .tooth.tooth1 {
     left: 0;
-    animation-duration: 4s; }
+    animation-duration: 4s;
+    width: 8vw;
+    height: 16vw; }
   .teeth .tooth.tooth2 {
     left: 10vw;
-    animation-duration: 11.5s; }
+    animation-duration: 11.5s;
+    width: 3.8vw;
+    height: 7.6vw; }
   .teeth .tooth.tooth3 {
     left: 23vw;
-    animation-duration: 6s; }
+    animation-duration: 6s;
+    width: 7vw;
+    height: 14vw; }
   .teeth .tooth.tooth4 {
     left: 32vw;
-    animation-duration: 7s; }
+    animation-duration: 7s;
+    width: 4vw;
+    height: 8.4vw; }
   .teeth .tooth.tooth5 {
     left: 44vw;
-    animation-duration: 10.5s; }
+    animation-duration: 10.5s;
+    width: 3vw;
+    height: 6vw; }
   .teeth .tooth.tooth6 {
     left: 54vw;
-    animation-duration: 4.3s; }
+    animation-duration: 4.3s;
+    width: 8vw;
+    height: 16vw; }
   .teeth .tooth.tooth7 {
     left: 62vw;
-    animation-duration: 9.2s; }
+    animation-duration: 9.2s;
+    width: 2.2vw;
+    height: 4.4vw; }
   .teeth .tooth.tooth8 {
     left: 69vw;
-    animation-duration: 7s; }
+    animation-duration: 7s;
+    width: 5.4vw;
+    height: 10.8vw; }
   .teeth .tooth.tooth9 {
     left: 79vw;
-    animation-duration: 9.6s; }
+    animation-duration: 9.6s;
+    width: 4.6vw;
+    height: 9.2vw; }
   .teeth .tooth.tooth10 {
     left: 83vw;
-    animation-duration: 4s; }
+    animation-duration: 4s;
+    width: 2.5vw;
+    height: 5vw; }
   .teeth .tooth.tooth11 {
     left: 98vw;
-    animation-duration: 6.3s; }
+    animation-duration: 6.3s;
+    width: 2.3vw;
+    height: 4.6vw; }
   .teeth .tooth.tooth12 {
-    left: -3vw;
-    animation-duration: 11.3s; }
+    left: 7vw;
+    animation-duration: 11.3s;
+    width: 6.2vw;
+    height: 12.4vw; }
   .teeth .tooth.tooth13 {
     left: 7vw;
-    animation-duration: 3.3s; }
+    animation-duration: 3.3s;
+    width: 2.1vw;
+    height: 4.2vw; }
   .teeth .tooth.tooth14 {
     left: 16vw;
-    animation-duration: 8.7s; }
+    animation-duration: 8.7s;
+    width: 3.6vw;
+    height: 7.2vw; }
   .teeth .tooth.tooth15 {
     left: 29vw;
-    animation-duration: 6.8s; }
+    animation-duration: 6.8s;
+    width: 3.6vw;
+    height: 8.2vw; }
   .teeth .tooth.tooth16 {
     left: 34vw;
-    animation-duration: 9.5s; }
+    animation-duration: 9.5s;
+    width: 4.2vw;
+    height: 8.4vw; }
   .teeth .tooth.tooth17 {
     left: 56vw;
-    animation-duration: 4s; }
+    animation-duration: 4s;
+    width: 3.1vw;
+    height: 6.2vw; }
   .teeth .tooth.tooth18 {
     left: 82vw;
-    animation-duration: 11s; }
+    animation-duration: 11s;
+    width: 2.8vw;
+    height: 5.6vw; }
   .teeth .tooth.tooth19 {
-    left: 98vw;
-    animation-duration: 5.6s; }
+    left: 96vw;
+    animation-duration: 5.6s;
+    width: 8.5vw;
+    height: 17vw; }
 
 @keyframes tooth {
   0% {
-    top: -100px;
-    background-color: blue; }
+    top: -100px; }
   25% {
-    top: 25vh;
-    background-color: teal; }
+    top: 25vh; }
   50% {
-    top: 50vh;
-    background-color: green; }
+    top: 50vh; }
   75% {
-    top: 75vh;
-    background-color: yellow; }
+    top: 75vh; }
   100% {
-    top: 100vh;
-    background-color: orange; } }
+    top: 100vh; } }
 #mc_embed_signup input {
   width: 300px;
   display: block;
