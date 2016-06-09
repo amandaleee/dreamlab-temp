@@ -44,7 +44,6 @@
 }
 // anvils
 .anvils {
-  // display:none;
   .anvil {    
     position: absolute; 
     animation-timing-function: linear;
@@ -108,13 +107,13 @@
       }
     }
     &.animate-left {
-      left: 0;
+      left: -24vw;
       animation-name: anvil-left;
       background-image: url(img/anvil-trailing-right.svg);
 
     }
     &.animate-right {
-      right: 0;
+      right: -30vw;
       animation-name: anvil-right;
       background-image: url(img/anvil-trailing-right.svg);
       -webkit-transform: scaleX(-1);
@@ -122,6 +121,9 @@
       -ms-transform: scaleX(-1);
       -o-transform: scaleX(-1);
       transform: scaleX(-1);
+      @media (min-width:768px) {
+        right: -20vw;
+      }
     }
   }
 }  
@@ -163,9 +165,9 @@
 
 .teeth {
   @extend .animations;
-  display:none;
   .tooth {
-    position: absolute; 
+    position: absolute;
+    top: 0;
     background: {
       image: url(img/tooth-trailing.svg);
       size: contain;
@@ -179,6 +181,7 @@
     animation-play-state: running;
     animation-fill-mode: forwards;
     animation-name: tooth;
+    max-width: 80px;
     &.tooth1 {
       left: 0;
       animation-duration: 4s;
@@ -310,7 +313,7 @@
 
 @keyframes tooth {
   0% {
-   top: -100px;
+    top: -100px;
   }
   25% {
     top: 25vh;
@@ -329,7 +332,6 @@
 .bunny {
   @extend .animations;
   position: absolute; 
-  display:none;
   background: {
     image: url(img/bun-bun.gif);
     size: contain;
