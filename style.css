@@ -61,48 +61,77 @@ body {
     width: 100%;
     height: 10vh;
     background: #e2eba6; }
-  .landscape .anvil {
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    border-radius: 50px;
+
+.anvils {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; }
+  .anvils .anvil {
     position: absolute;
-    border: 1px solid blue; }
-    .landscape .anvil.anvil1 {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    .anvils .anvil.anvil1 {
       top: 30vh;
-      animation-duration: 12s; }
-    .landscape .anvil.anvil2 {
-      top: 0;
-      animation-duration: 8s; }
-    .landscape .anvil.anvil3 {
+      animation-duration: 12s;
+      width: 10vw;
+      height: 10vw; }
+      @media (min-width: 768px) {
+        .anvils .anvil.anvil1 {
+          width: 7vw;
+          height: 7vw; } }
+    .anvils .anvil.anvil2 {
+      top: 12vh;
+      animation-duration: 8s;
+      width: 11vw;
+      height: 11vw; }
+      @media (min-width: 768px) {
+        .anvils .anvil.anvil2 {
+          width: 6vw;
+          height: 6vw; } }
+    .anvils .anvil.anvil3 {
       top: 50vh;
-      animation-duration: 7s; }
-    .landscape .anvil.anvil4 {
+      animation-duration: 7s;
+      width: 16vw;
+      height: 16vw; }
+      @media (min-width: 768px) {
+        .anvils .anvil.anvil3 {
+          width: 12vw;
+          height: 12vw; } }
+    .anvils .anvil.anvil4 {
       top: 33vh;
-      animation-duration: 13s; }
-    .landscape .anvil.anvil5 {
+      animation-duration: 13s;
+      width: 13vw;
+      height: 13vw; }
+      @media (min-width: 768px) {
+        .anvils .anvil.anvil4 {
+          width: 11vw;
+          height: 11vw; } }
+    .anvils .anvil.anvil5 {
       top: 24vh;
-      animation-duration: 4s; }
-    .landscape .anvil.animate-left {
+      animation-duration: 5s;
+      width: 30vw;
+      height: 30vw; }
+      @media (min-width: 768px) {
+        .anvils .anvil.anvil5 {
+          width: 20vw;
+          height: 20vw; } }
+    .anvils .anvil.animate-left {
       left: 0;
       animation-name: anvil-left;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-delay: 0;
-      animation-play-state: running;
-      animation-fill-mode: forwards; }
-    .landscape .anvil.animate-right {
+      background-image: url(img/anvil-trailing-right.svg); }
+    .anvils .anvil.animate-right {
       right: 0;
       animation-name: anvil-right;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-delay: 0;
-      animation-play-state: running;
-      animation-fill-mode: forwards; }
+      background-image: url(img/anvil-trailing-left.svg); }
 
 @keyframes anvil-left {
   0% {
