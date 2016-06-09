@@ -27,16 +27,19 @@
     background: $light-green;
   }
 }
-
-// anvils
-.anvils {
+//stuff to extend 
+.animations {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
-  // display: none;
+}
+// anvils
+.anvils {
+  @extend .animations;
+  display: none;
   .anvil {    
     position: absolute; 
     animation-timing-function: linear;
@@ -143,6 +146,131 @@
   }
   100% {
     right: 100vw;
+  }
+}
+
+.teeth {
+  @extend .animations;
+  // display: none;
+  .tooth {
+    position: absolute; 
+    background: {
+      image: url(img/tooth-trailing.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-name: tooth;
+    width: 100px; 
+    height: 100px; 
+
+    &.tooth1 {
+      left: 0;
+      animation-duration: 4s;
+    }
+    &.tooth2 {
+      left: 10vw;
+      animation-duration: 11.5s;
+    }
+    &.tooth3 {
+      left: 23vw;
+      animation-duration: 6s;
+    }
+    &.tooth4 {
+      left: 32vw;
+      animation-duration: 7s;
+    }
+    &.tooth5 {
+      left: 44vw;
+      animation-duration: 10.5s;
+    }
+    &.tooth6 {
+      left: 54vw;
+      animation-duration: 4.3s;
+    }
+    &.tooth7 {
+      left: 62vw;
+      animation-duration: 9.2s;
+    }
+    &.tooth8 {
+      left: 69vw;
+      animation-duration: 7s;
+    }
+    &.tooth9 {
+      left: 79vw;
+      animation-duration: 9.6s;
+    }
+    &.tooth10 {
+      left: 83vw;
+      animation-duration: 4s;
+    }
+    &.tooth11 {
+      left: 98vw;
+      animation-duration: 6.3s;
+    }
+    //below will be hidden on mobile
+    &.tooth12 {
+      left: -3vw;
+      animation-duration: 11.3s;
+    }
+    &.tooth13 {
+      left: 7vw;
+      animation-duration: 3.3s;
+    }
+    &.tooth14 {
+      left: 16vw;
+      animation-duration: 8.7s;
+    }
+    &.tooth15 {
+      left: 29vw;
+      animation-duration: 6.8s;
+    }
+    &.tooth16 {
+      left: 34vw;
+      animation-duration: 9.5s;
+    }
+    &.tooth17 {
+      left: 56vw;
+      animation-duration: 4s;
+    }
+    &.tooth18 {
+      left: 82vw;
+      animation-duration: 11s;
+    }
+    &.tooth19 {
+      left: 98vw;
+      animation-duration: 5.6s;
+    }
+
+  }
+
+}
+
+@keyframes tooth {
+  0% {
+   top: -100px;
+   background-color: blue;
+  }
+  25% {
+    top: 25vh;
+    background-color: teal;
+  }
+  50% {    
+    top: 50vh;
+    background-color: green;
+  }
+  75% {
+    top: 75vh;
+    background-color: yellow;
+  }
+  100% {
+    top: 100vh;
+    background-color: orange;
   }
 }
 
