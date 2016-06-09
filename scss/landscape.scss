@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 105;
   overflow: hidden;
 }
 .mobile-hide {
@@ -312,23 +312,25 @@
 .bunny {
   @extend .animations;
   position: absolute; 
-  background: {
-    image: url(img/bun-bun.gif);
-    size: contain;
-    repeat: no-repeat;
-    position: center center;
-  }
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; 
-  animation-direction: normal;
-  animation-delay: 0;
-  animation-play-state: running;
-  animation-fill-mode: forwards;
-  animation-name: bunny;
-  left: 0;
-  top: 70vh;
-  animation-duration: 8s;
-  width: 80px;
+  .the-bunny {
+    background: {
+      image: url(img/bun-bun.gif);
+      size: contain;
+      repeat: no-repeat;
+      position: center center;
+    }
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-name: bunny;
+    left: 0;
+    top: 70vh;
+    animation-duration: 8s;
+    width: 80px;
+    }
 }
 
 @keyframes bunny {

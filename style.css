@@ -71,7 +71,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 105;
   overflow: hidden; }
 
 @media (max-width: 768px) {
@@ -283,22 +283,23 @@ p {
     transform: translateY(0%);
     top: 100vh; } }
 .bunny {
-  position: absolute;
-  background-image: url(img/bun-bun.gif);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-delay: 0;
-  animation-play-state: running;
-  animation-fill-mode: forwards;
-  animation-name: bunny;
-  left: 0;
-  top: 70vh;
-  animation-duration: 8s;
-  width: 80px; }
+  position: absolute; }
+  .bunny .the-bunny {
+    background-image: url(img/bun-bun.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-name: bunny;
+    left: 0;
+    top: 70vh;
+    animation-duration: 8s;
+    width: 80px; }
 
 @keyframes bunny {
   0% {
@@ -309,6 +310,7 @@ p {
     left: 100vw; } }
 #mc_embed_signup input {
   width: 300px;
+  max-width: 100%;
   display: block;
   margin: 10px auto;
   font-family: 'moonlight', sans-serif;
