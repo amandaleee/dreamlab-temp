@@ -157,7 +157,7 @@
 
 .teeth {
   @extend .animations;
-  // display: none;
+  display: none;
   .tooth {
     position: absolute; 
     background: {
@@ -321,6 +321,97 @@
   }
   100% {
     top: 100vh;
+  }
+}
+.bunny {
+  @extend .animations; 
+  // display: none;
+  position: absolute; 
+  background: {
+    // image: url(img/tooth-trailing.svg);
+    size: contain;
+    repeat: no-repeat;
+    position: center center;
+  }
+  animation-timing-function: ease-in ease-out;
+  animation-iteration-count: infinite; 
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  animation-name: bunny;
+  left: 0;
+  top: 80vh;
+  animation-duration: 18s;
+  width: 10vh;
+  height: 10vh; 
+}
+
+@keyframes bunny {
+  0% {
+    background-color: blue;
+    left: -100px;
+  }
+  5% {
+    left: 10vw;
+    top: 70vh;
+  }
+  7% {
+    left: 20vw;
+    top: 80vh;
+  }
+  20% {
+    background-color: purple;
+    left: 20vw;
+    top: 80vh;
+  }
+  25% {
+    left: 30vw; 
+    top: 70vh;
+  } 
+  27% {
+    left: 40vw;
+    top: 80vh
+  }
+  40% {
+    background-color: indigo;
+    left: 40vw;
+    top: 80vh;
+  }
+  45% {
+    left: 50vw;
+    top: 70vh;
+  }
+  47% {
+    left: 60%; 
+    top: 80vh; 
+  }
+  60% {    
+    background-color:  darkmagenta;  
+    left: 50vw;
+    top: 70vh;
+  }
+  65% {
+    left: 60vw;
+    top: 80vh;
+  }
+  67% {
+
+  }
+  80% {
+    background-color:  mediumvioletred;
+  }
+  85% {
+
+  }
+  87% {
+
+  }
+
+  100% {
+    background-color: silver;
+    left: 110vw;
+    top: 80vh;
   }
 }
 

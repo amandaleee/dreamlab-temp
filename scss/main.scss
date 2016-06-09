@@ -28,6 +28,14 @@ $light-teal: #c3e5de;
     transform: translate(-50%,-50%);
 }
 
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
 //fonts
 @font-face {
     font-family: 'moonlight';
