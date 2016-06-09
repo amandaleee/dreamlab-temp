@@ -44,6 +44,7 @@
 }
 // anvils
 .anvils {
+  // display:none;
   .anvil {    
     position: absolute; 
     animation-timing-function: linear;
@@ -110,11 +111,17 @@
       left: 0;
       animation-name: anvil-left;
       background-image: url(img/anvil-trailing-right.svg);
+
     }
     &.animate-right {
       right: 0;
       animation-name: anvil-right;
-      background-image: url(img/anvil-trailing-left.svg);
+      background-image: url(img/anvil-trailing-right.svg);
+      -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
     }
   }
 }  
@@ -156,6 +163,7 @@
 
 .teeth {
   @extend .animations;
+  display:none;
   .tooth {
     position: absolute; 
     background: {
@@ -321,6 +329,7 @@
 .bunny {
   @extend .animations;
   position: absolute; 
+  display:none;
   background: {
     image: url(img/bun-bun.gif);
     size: contain;
