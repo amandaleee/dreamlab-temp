@@ -152,29 +152,21 @@ p {
 
 @keyframes anvil-left {
   0% {
-    left: -100px; }
-  25% {
-    left: 25vw; }
-  50% {
-    left: 50vw; }
-  75% {
-    left: 75vw; }
+    transform: translateX(-100%);
+    left: 0; }
   100% {
+    transform: translateX(0%);
     left: 100vw; } }
 @keyframes anvil-right {
   0% {
-    right: -100px; }
-  25% {
-    right: 25vw; }
-  50% {
-    right: 50vw; }
-  75% {
-    right: 75vw; }
+    transform: translateX(100%) scaleX(-1);
+    right: 0; }
   100% {
+    transform: translateX(0%) scaleX(-1);
     right: 100vw; } }
 .teeth .tooth {
   position: absolute;
-  top: 0;
+  transform: translateY(-100%);
   background-image: url(img/tooth-trailing.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -285,14 +277,10 @@ p {
 
 @keyframes tooth {
   0% {
-    top: -100px; }
-  25% {
-    top: 25vh; }
-  50% {
-    top: 50vh; }
-  75% {
-    top: 75vh; }
+    transform: translateY(-100%);
+    top: 0; }
   100% {
+    transform: translateY(0%);
     top: 100vh; } }
 .bunny {
   position: absolute;
@@ -314,14 +302,10 @@ p {
 
 @keyframes bunny {
   0% {
-    left: -100px; }
-  25% {
-    left: 25vw; }
-  50% {
-    left: 50vw; }
-  75% {
-    left: 75vw; }
+    transform: translateX(-100%);
+    left: 0; }
   100% {
+    transform: translateX(0%);
     left: 100vw; } }
 #mc_embed_signup input {
   width: 300px;
